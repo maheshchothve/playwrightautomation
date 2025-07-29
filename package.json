@@ -1,0 +1,16 @@
+{
+  "name": "playwrightautomation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx playwright test Dfo.spec.js --headed --project=chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.5"
+  }
+}
