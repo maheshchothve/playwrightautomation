@@ -16,4 +16,6 @@ test('Home Page',async ({page})=>{
 
     await expect(page).toHaveTitle('Automation Exercise - Signup / Login');
 
+    await page.close();
+
 } )
