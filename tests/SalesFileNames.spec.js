@@ -37,15 +37,15 @@ test('Dynamic Login to AlixPartners Web App', async ({ }) => {
     await salesFilesLink.click();
 
 
-   
+   page.waitForSelector("//main[@class='MuiBox-root mui-style-i9gxme']//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3 MuiGrid-grid-xl-2.4 mui-style-1nscn09']");
+
     const salesfiles= await page.$$("//main[@class='MuiBox-root mui-style-i9gxme']//div[@class='MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3 MuiGrid-grid-xl-2.4 mui-style-1nscn09']");
-     await salesfiles.waitFor({ state: 'visible', timeout: 60000 });
     console.log("Sales files loaded successfully!");    
 
     
     for(const salesfile of salesfiles){
        const salesFileName=await salesfile.textContent();
-       console.log(`Sales File Name: ${salesFileName}`);
-
+       console.log(`salesFileName`);
+        console.log("clicking on slaes);")
    }
 });
