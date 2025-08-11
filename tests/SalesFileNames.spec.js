@@ -46,6 +46,6 @@ test('Dynamic Login to AlixPartners Web App', async ({ }) => {
     for(const salesfile of salesfiles){
        const salesFileName=await salesfile.textContent();
        console.log(`salesFileName`);
-        console.log("clicking on slaes);")
+        console.log("clicking on sales);")
    }
 });

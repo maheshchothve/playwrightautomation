@@ -21,6 +21,7 @@ test('locatingmultipleElements',async ({page})=>{
     {
        const productname= await product.textContent;
        console.log(+productname);
+       console.log("clicking products");
     }
 
 
