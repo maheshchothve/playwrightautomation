@@ -15,7 +15,7 @@ test('handle check box',async({page})=>{
       
         const value=await option.textContent();
 
-        if(value.includes('Item 21')){
+        if(value.includes('Item 10')){
          await option.click();
         }
         
