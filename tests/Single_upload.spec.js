@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.skip('single upload', async ({ page }) => {
+test('single upload', async ({ page }) => {
 
       await  page.goto("https://testautomationpractice.blogspot.com/")
      const btn = await page.locator("//input[@id='singleFileInput']")
@@ -12,6 +12,7 @@ test.skip('single upload', async ({ page }) => {
      await expect(page.locator("//p[@id='singleFileStatus']")).toHaveText("Single file selected: a.txt.docx, Size: 11529 bytes, Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document")
 
       await  page.waitForTimeout(7000);
+      await page.screenshot({ path: 'screenshot/single-upload-results.png' });
 
 });
 
@@ -29,6 +30,9 @@ a.txt.docx, Size: 11529 bytes, Type: application/vnd.openxmlformats-officedocume
 Overseas_Sales_Test_File.csv, Size: 5925 bytes, Type: text/csv`)
 
       await  page.waitForTimeout(7000);
+
+          await page.screenshot({ path: 'screenshot/multiple-upload-results.png' });
+
 
 });
 
