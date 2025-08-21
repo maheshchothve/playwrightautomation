@@ -9,6 +9,6 @@ test('drag and drop', async ({ page }) => {
     await source.dragTo(target)
 
     await expect(target).toHaveText("Dropped!")
-    await page.screenshot({ path: 'screenshot/drag-and-drop-results.png', fullPage: true });
+    await page.screenshot({ path: 'screenshot/drag-and-drop-results.png' });
 
 })
