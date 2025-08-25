@@ -18,17 +18,17 @@ class Homepage{
         }
        }
        await this.page.on('dialog',async dialog =>{
-        if (dialog.message().includes("Product Added")) {
+        if (dialog.message().includes("added")) {
             await dialog.accept();
         }
 
        });
 
-       await this.page.click(this.addToCartButton);
+       await this.page.locator(this.addToCartButton).click();
 
     }
     async gotocart(){
-        await this.page.click(this.cartbtn);
+        await this.page.locator(this.cartbtn).click();
 
     }
 }

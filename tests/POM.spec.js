@@ -21,11 +21,13 @@ test('locator',async ({page})=>{
     const home = new Homepage(page);
     await home.AddToCart("Nexus 6");
     await page.waitForTimeout(3000);
-    await home.gotocart();
+     await home.gotocart();
      await page.waitForTimeout(3000);
+
     //verify product added in cart
     const cart = new cartpage(page);
     const isProductInCart = await cart.cartpage("Nexus 6");
     expect(isProductInCart).toBe(true);
-
+    //REMOVE THE ADDED ITEMS FROM CART
+    //await cart.deleteFun("Nexus 6");
 });
