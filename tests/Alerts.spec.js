@@ -11,6 +11,7 @@ test.skip('alert ok only test', async ({ page }) => {
       });
 
       await page.locator("//button[normalize-space()='Simple Alert']").click();
+      await page.screenshot({path:'screenshot/simple alert.png'});
       await page.waitForTimeout(5000);
 
 
@@ -27,6 +28,7 @@ test('alert promt test', async ({ page }) => {
 
       await page.locator("//button[normalize-space()='Confirmation Alert']").click();
       await expect(page.locator('//p[@id="demo"]')).toHaveText("You pressed OK!");
+      await page.screenshot({path:'screenshot/confirmation alert.png'});
       await page.waitForTimeout(5000);
 
 
@@ -43,5 +45,6 @@ test("prompt alert test", async({page})=>{
 
     await page.locator("//button[normalize-space()='Prompt Alert']").click();
     await expect(page.locator('//p[@id="demo"]')).toHaveText("Hello John Doe! How are you today?");
+    await page.screenshot({path:'screenshot/prompt alert.png'});
     await page.waitForTimeout(5000);
 })
