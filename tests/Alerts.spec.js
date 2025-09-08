@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.skip('alert ok only test', async ({ page }) => {
+test('alert ok only test', async ({ page }) => {
 
       await  page.goto("https://testautomationpractice.blogspot.com/")
 //normal alert , only ok button.
@@ -13,6 +13,7 @@ test.skip('alert ok only test', async ({ page }) => {
       await page.locator("//button[normalize-space()='Simple Alert']").click();
       await page.screenshot({path:'screenshot/simple alert.png'});
       await page.waitForTimeout(5000);
+      await page.screenshot({path:'screenshot/simple_alert.png'});
 
 
 });
@@ -30,7 +31,7 @@ test('alert promt test', async ({ page }) => {
       await expect(page.locator('//p[@id="demo"]')).toHaveText("You pressed OK!");
       await page.screenshot({path:'screenshot/confirmation alert.png'});
       await page.waitForTimeout(5000);
-
+      await page.screenshot({path:'screenshot/confirmation_alert.png'});
 
 });
 
@@ -47,4 +48,5 @@ test("prompt alert test", async({page})=>{
     await expect(page.locator('//p[@id="demo"]')).toHaveText("Hello John Doe! How are you today?");
     await page.screenshot({path:'screenshot/prompt alert.png'});
     await page.waitForTimeout(5000);
+    await page.screenshot({path:'screenshot/prompt_alert.png'});
 })
