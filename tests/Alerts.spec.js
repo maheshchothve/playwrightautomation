@@ -31,7 +31,7 @@ test('alert promt test', async ({ page }) => {
       await expect(page.locator('//p[@id="demo"]')).toHaveText("You pressed OK!");
       await page.screenshot({path:'screenshot/confirmation alert.png'});
       await page.waitForTimeout(5000);
-      await page.screenshot({path:'screenshot/confirmation_alert.png'});
+    
 
 });
 
